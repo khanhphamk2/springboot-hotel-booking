@@ -2,12 +2,12 @@ package org.khanhpham.hotelbooking.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+//import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 import java.util.Set;
 
-@ToString
-@RequiredArgsConstructor
+@Data
 @Builder
 @Getter
 @Setter
@@ -15,6 +15,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Entity
 @Table(name = "users")
+//@Component
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

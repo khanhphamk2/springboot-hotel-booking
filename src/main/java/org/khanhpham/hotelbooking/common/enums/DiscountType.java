@@ -1,4 +1,4 @@
-package org.khanhpham.hotelbooking.config.enums;
+package org.khanhpham.hotelbooking.common.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

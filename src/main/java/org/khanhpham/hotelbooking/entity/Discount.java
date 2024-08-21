@@ -2,7 +2,7 @@ package org.khanhpham.hotelbooking.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.khanhpham.hotelbooking.config.enums.DiscountType;
+import org.khanhpham.hotelbooking.common.enums.DiscountType;
 
 @Data
 @AllArgsConstructor

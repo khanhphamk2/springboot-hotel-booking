@@ -1,16 +1,14 @@
-package org.khanhpham.hotelbooking.config.enums;
+package org.khanhpham.hotelbooking.common.enums;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 
+@Getter
 @AllArgsConstructor
 public enum BookStatus {
     PENDING("Pending"),
-    PAID("Paid"),
+    BOOKED("Booked"),
     CANCELLED("Cancelled");
 
     private final String displayName;
-
-    public String getDisplayName() {
-        return displayName;
-    }
 }
