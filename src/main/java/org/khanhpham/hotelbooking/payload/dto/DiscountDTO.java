@@ -1,9 +1,16 @@
-package org.khanhpham.hotelbooking.dto;
+package org.khanhpham.hotelbooking.payload.dto;
 
-import lombok.Data;
+import lombok.*;
 
+/**
+ * DTO for {@link org.khanhpham.hotelbooking.entity.Discount}
+ */
 @Data
-public class DiscountDto {
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class DiscountDTO {
     private Long id;
     private String discountCode;
     private double discountValue;

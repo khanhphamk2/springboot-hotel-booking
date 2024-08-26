@@ -3,20 +3,21 @@ package org.khanhpham.hotelbooking.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Data
+import java.math.BigDecimal;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @Entity
 @Table(name = "room")
-public class Room {
+public class Room extends AuditEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String roomNumber;
     private String roomType;
     private String bedType;
-    private Double roomPrice;
+    private BigDecimal roomPrice;
     private boolean isBooked;
 }

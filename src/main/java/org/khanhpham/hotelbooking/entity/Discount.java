@@ -4,14 +4,13 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.khanhpham.hotelbooking.common.enums.DiscountType;
 
-@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
 @Entity
 @Table(name = "discounts")
-public class Discount {
+public class Discount extends AuditEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

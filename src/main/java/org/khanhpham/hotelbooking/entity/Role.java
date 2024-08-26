@@ -3,7 +3,6 @@ package org.khanhpham.hotelbooking.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
-@Data
 @Getter
 @Setter
 @AllArgsConstructor

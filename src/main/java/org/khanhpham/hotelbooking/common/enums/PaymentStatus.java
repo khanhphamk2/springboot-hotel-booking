@@ -5,10 +5,11 @@ import lombok.Getter;
 
 @Getter
 @AllArgsConstructor
-public enum BookStatus {
+public enum PaymentStatus {
     PENDING("Pending"),
-    BOOKED("Booked"),
-    CANCELLED("Cancelled");
+    COMPLETED("Completed"),
+    FAILED("Failed"),
+    REFUNDED("Refunded");
 
     private final String displayName;
 }

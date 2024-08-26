@@ -11,4 +11,12 @@ public enum DiscountType {
 
     private final String displayName;
 
+    public static DiscountType fromDisplayName(String displayName) {
+        for (DiscountType type : DiscountType.values()) {
+            if (type.getDisplayName().equalsIgnoreCase(displayName)) {
+                return type;
+            }
+        }
+        throw new IllegalArgumentException("No enum constant with displayName " + displayName);
+    }
 }

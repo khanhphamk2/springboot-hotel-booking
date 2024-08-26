@@ -12,7 +12,9 @@
     <artifactId>springboot-hotel-booking</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>springboot-hotel-booking</name>
-    <description>springboot-hotel-booking</description>
+    <description>
+        Spring Boot application for hotel booking management. This project provides a comprehensive system for managing hotel reservations, room availability, user accounts, and booking records. It leverages Spring Boot's features for building robust backend services, including auditing, security, and database management, to ensure an efficient and reliable hotel booking experience.
+    </description>
     <url/>
     <licenses>
         <license/>

@@ -2,12 +2,10 @@ package org.khanhpham.hotelbooking.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-//import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 import java.util.Set;
 
-@Data
 @Builder
 @Getter
 @Setter
@@ -15,17 +13,26 @@ import java.util.Set;
 @NoArgsConstructor
 @Entity
 @Table(name = "users")
-//@Component
-public class User {
+public class User extends AuditEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
+
     @Column(nullable = false, unique = true)
     private String username;
+
     @Column(nullable = false, unique = true)
     private String email;
+
+    private String phone;
+
     private String password;
+
+    @Column(name = "reset_password_token", nullable = false)
+    private String resetPasswordToken;
+
+    @Column(name = "reset_password_token_expired_date", nullable = false)
+    private LocalDateTime resetPasswordTokenExpiredDate;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     @JoinTable(name = "users_roles",
@@ -41,10 +48,9 @@ public class User {
     )
     private Set<Discount> discounts;
 
-    private String resetPasswordToken;
-    private LocalDateTime resetPasswordTokenExpiredDate;
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private Profile profile;
 
-    private String phone;
-    private String address;
+    @Column(name = "is_active", nullable = false)
     private boolean isActive;
 }
